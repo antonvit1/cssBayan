@@ -20,6 +20,8 @@ body {
 .caption_string {
   display: flex;
   justify-content: space-between;
+  color: #76290d;
+  cursor: pointer;
 }
 .icon_cross {
   width: 1.3vw;
@@ -28,14 +30,19 @@ body {
   transition: 0.4s;
   padding-left: 1vw;
 }
-
-
-
 .card:hover .icon_cross,
 .card:active .icon_cross,
 .card:focus .icon_cross {
   transform: rotate(90deg);
   transition: 0.5s;
+}
+
+.mem_card:checked ~ .img_mem {
+  opacity: 1;
+  height: 100%;
+}
+.mem_card:checked ~ .caption_string {
+  color: #251d1a;
 }
 
 .card {
@@ -68,12 +75,12 @@ body {
 .card:active .picture_mem {
   opacity: 0.2;
 }
-.card:active .caption_name {
+.card:active .caption_string {
   color: #76290d;
 }
-.caption_name {
+/* .caption_name {
   color: #76290d;
-}
+} */
 .card:focus .img_mem,
 .card:active .img_mem,
 .card:hover {
@@ -88,7 +95,10 @@ body {
   justify-content: center;
   padding-bottom: 1vh;
   padding-top: 1vh;
+  cursor: pointer;
 }
+
+
 @media (max-width: 820px) {
   body {
     font-size: 1.6rem;
