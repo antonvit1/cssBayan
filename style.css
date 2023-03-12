@@ -8,14 +8,14 @@ body {
   margin-left: 10%;
   margin-bottom: 5%;
 }
-.accordion:hover .caption_name {
+/* .accordion:hover .caption_name {
   color: #251d1a;
   transition: 0.3s;
 }
 .accordion:hover .icon_cross {
   opacity: 1;
   transition: 0.4s;
-}
+} */
 .caption {
   border-bottom: 0.1vh solid #3e3e23;
   color: #251d1a;
@@ -43,11 +43,11 @@ body {
   color: #251d1a;
 }
 
-.card:hover .img_mem {
+/* .card:hover .img_mem {
   opacity: 1;
   height: 100%;
   transition: all 0.4s;
-}
+} */
 
 .card:active .picture_mem {
   opacity: 0.2;
@@ -56,15 +56,14 @@ body {
   color: #76290d;
   transition: 0.2s;
 }
-
+/* .card:hover */
 .card:focus .img_mem,
-.card:active .img_mem,
-.card:hover {
+.card:active .img_mem{
   opacity: 1;
   height: 100%;
 }
 
-.card:hover .icon_cross,
+/* .card:hover .icon_cross, */
 .card:active .icon_cross,
 .card:focus .icon_cross {
   transform: rotate(90deg);
@@ -124,5 +123,28 @@ body {
   }
   .icon_cross {
     width: 6vw;
+  }
+}
+@media (hover: hover) {
+  .card:hover .img_mem {
+    opacity: 1;
+    height: 100%;
+    transition: all 0.4s;
+  }
+  .card:hover {
+    opacity: 1;
+    height: 100%;
+  }
+  .card:hover .icon_cross{
+    transform: rotate(90deg);
+    transition: 0.5s;
+  }
+  .accordion:hover .caption_name {
+    color: #251d1a;
+    transition: 0.3s;
+  }
+  .accordion:hover .icon_cross {
+    opacity: 1;
+    transition: 0.4s;
   }
 }
